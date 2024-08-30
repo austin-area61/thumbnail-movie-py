@@ -6,7 +6,13 @@ thumbnail_path = r"C:\Users\AUSTIN\thumbnail-movie-py\spidervswasp.jpeg"
 
 # Load the video and thumbnail using the correct paths
 video = VideoFileClip(video_path)
-thumbnail = ImageClip(thumbnail_path).set_duration(5).resize(width=video.w).set_start(0)
+
+thumbnail = (
+    ImageClip(thumbnail_path)
+    .set_duration(1)
+    .resize(width=video.w)  # Resize thumbnail width to match the video
+    .set_start(0)           # Start the thumbnail at the beginning of the video
+)
 
 # Combine the thumbnail and video
 final_clip = CompositeVideoClip([thumbnail, video.set_start(thumbnail.duration)])
