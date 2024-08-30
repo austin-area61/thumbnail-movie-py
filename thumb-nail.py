@@ -1,7 +1,7 @@
 from moviepy.editor import VideoFileClip, ImageClip, CompositeVideoClip
 
 #import video and image for thumbnail
-video = VideoFileClip("")
+video = VideoFileClip("C:\Users\YourUsern\Documents\path_to_video.mp4")
 thumbnail = ImageClip("")
 
 ##Set the thumbnail duration
